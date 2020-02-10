@@ -27,19 +27,23 @@ public class MyBookManager extends Mybook{
 
     //添加图书
     public void inputData(){
-        System.out.println("输入书名：");
-        name = sc.next();
-        System.out.println("输入价格：");
-        price = sc.nextDouble();
-        System.out.println("输入出版社：");
-        press = sc.next();
-        System.out.println("输入作者：");
-        author = sc.next();
-        System.out.println("输入书的ISBM号：");
-        bookISBM = sc.next();
-        books.add(new Mybook(name,price,press,author,bookISBM));
+        int num = sc.nextInt();
+        for(int i = 0;i<num;i++) {
+            System.out.println("输入书名：");
+            name = sc.next();
+            System.out.println("输入价格：");
+            price = sc.nextDouble();
+            System.out.println("输入出版社：");
+            press = sc.next();
+            System.out.println("输入作者：");
+            author = sc.next();
+            System.out.println("输入书的ISBM号：");
+            bookISBM = sc.next();
+            books.add(new Mybook(name, price, press, author, bookISBM));
+
+            System.out.println(books);
+        }
         System.out.println("添加完成");
-        System.out.println(books);
     }
 
     //删除图书
@@ -57,7 +61,7 @@ public class MyBookManager extends Mybook{
     }
     //查找图书
     public void searchName(){
-        System.out.println("请输入要删除的图书名");
+        System.out.println("请输入要查找的图书名");
         String name1 = sc.next();
         for(int i = 0;i<books.size();i++){
             //System.out.println(mybook.getName());
