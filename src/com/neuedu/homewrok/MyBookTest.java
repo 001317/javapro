@@ -13,11 +13,9 @@ public class MyBookTest {
         boolean flag = true;
         while(flag){
             System.out.println("1 添加图书");
-
             System.out.println("2 删除图书");
-
             System.out.println("3 查找图书");
-            System.out.println("4 修改图书");
+            System.out.println("4 退出");
             int choice = sc.nextInt();
             myBookManager.menu(choice);
         }

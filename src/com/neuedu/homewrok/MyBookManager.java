@@ -18,10 +18,10 @@ public class MyBookManager extends Mybook{
                 deleteName();
                 break;
             case 3:
-                print();
-//            case 4:
-//                return "退出当前用户";
-//            default:
+                searchName();
+                break;
+            case 4:
+                break;
         }
     }
 
@@ -47,17 +47,26 @@ public class MyBookManager extends Mybook{
         System.out.println("请输入要删除的图书名");
         String name1 = sc.next();
         for(int i = 0;i<books.size();i++){
-            if(mybook.getName().equals(name1)){
-                //books.remove(i);
-                System.out.println("11");
-            }else{
-                System.out.println("该书不存在");
-            }
+            //System.out.println(mybook.getName());
+         if(name1.equals(books.get(i).getName())) {
+             books.remove(i);
+             //return;
+         }
         }
         System.out.println(books);
     }
     //查找图书
-    public void searchName(ArrayList<Mybook> books,String name){
+    public void searchName(){
+        System.out.println("请输入要删除的图书名");
+        String name1 = sc.next();
+        for(int i = 0;i<books.size();i++){
+            //System.out.println(mybook.getName());
+            if(name1.equals(books.get(i).getName())) {
+                System.out.println(books);
+                //return;
+            }
+        }
+        //System.out.println(books);
 
     }
     //输出图书信息
