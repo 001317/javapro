@@ -8,7 +8,7 @@ public class MyBookManager extends Mybook{
     ArrayList<Mybook> books = new ArrayList<Mybook>();
     Mybook mybook = new Mybook();
     Scanner sc = new Scanner(System.in);
-
+    MyBookTest myBookTest = new MyBookTest();
     public void menu(int choice){
         switch(choice){
             case 1:
@@ -21,6 +21,8 @@ public class MyBookManager extends Mybook{
                 searchName();
                 break;
             case 4:
+
+               System.exit(0);
                 break;
         }
     }
@@ -43,7 +45,9 @@ public class MyBookManager extends Mybook{
 
             System.out.println(books);
         }
+        myBookTest.save();
         System.out.println("添加完成");
+
     }
 
     //删除图书
@@ -57,16 +61,18 @@ public class MyBookManager extends Mybook{
              //return;
          }
         }
+        myBookTest.save();
         System.out.println(books);
     }
     //查找图书
     public void searchName(){
+        System.out.println(books);
         System.out.println("请输入要查找的图书名");
         String name1 = sc.next();
         for(int i = 0;i<books.size();i++){
             //System.out.println(mybook.getName());
             if(name1.equals(books.get(i).getName())) {
-                System.out.println(books);
+                System.out.println(books.get(i));
                 //return;
             }
         }

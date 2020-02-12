@@ -1,6 +1,9 @@
 package com.neuedu.homewrok;
 
-public class Mybook {
+import java.io.Serializable;
+
+public class Mybook implements Serializable {
+    private static final long serialVersionUID = 1L;
     public String name;
     public double price;
     public String press;
